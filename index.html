@@ -1,0 +1,162 @@
+<!doctype html>
+<html lang="en" class="fonts-loading">
+  <head>
+    <link
+      rel="preload"
+      href="assets/barrio.ttf"
+      as="font"
+      type="font/ttf"
+      crossorigin
+    />
+    <link
+      rel="preload"
+      href="assets/sniglet.ttf"
+      as="font"
+      type="font/ttf"
+      crossorigin
+    />
+    <link
+      rel="preload"
+      href="assets/fira-sans-regular.ttf"
+      as="font"
+      type="font/ttf"
+      crossorigin
+    />
+    <link
+      rel="preload"
+      href="assets/fira-sans-semibold.ttf"
+      as="font"
+      type="font/ttf"
+      crossorigin
+    />
+    <link
+      rel="preload"
+      href="assets/fira-sans-bold.ttf"
+      as="font"
+      type="font/ttf"
+      crossorigin
+    />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Statins After 70 • Journal Club</title>
+    <meta
+      name="description"
+      content="A complete interactive residency journal club on STAREE and statins, cardiovascular prevention, and dementia."
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div id="fontLoader" class="fontLoader" role="status">
+      Preparing presentation…
+    </div>
+    <div class="frame heroMode" id="frame">
+      <div class="forestBackdrop" aria-hidden="true"></div>
+      <div class="paper"></div>
+      <svg width="0" height="0" aria-hidden="true">
+        <defs>
+          <filter id="wash">
+            <feTurbulence
+              type="fractalNoise"
+              baseFrequency=".025"
+              numOctaves="3"
+              result="noise"
+            />
+            <feDisplacementMap in="SourceGraphic" in2="noise" scale="5" />
+          </filter>
+          <g id="branch" filter="url(#wash)">
+            <path
+              d="M130 330 Q100 220 160 40"
+              stroke="#8a6441"
+              stroke-width="3"
+              fill="none"
+            />
+            <g fill="#bd592f" opacity=".87">
+              <path d="M145 100 Q65 90 75 35 Q137 25 145 100" />
+              <path d="M133 145 Q192 125 216 63 Q147 69 133 145" />
+              <path d="M122 198 Q54 170 40 109 Q111 122 122 198" />
+              <path d="M120 249 Q204 221 220 158 Q146 163 120 249" />
+            </g>
+            <g fill="#d99a41" opacity=".9">
+              <path d="M138 120 Q70 140 38 77 Q101 63 138 120" />
+              <path d="M122 221 Q191 190 177 138 Q129 151 122 221" />
+              <path d="M127 288 Q62 288 38 228 Q111 220 127 288" />
+            </g>
+            <g fill="#8b9165" opacity=".8">
+              <path d="M157 66 Q205 37 189 0 Q155 16 157 66" />
+              <path d="M125 270 Q173 288 194 244 Q146 229 125 270" />
+            </g>
+            <g stroke="#93603d" stroke-width="1" opacity=".4">
+              <path
+                d="M145 100L88 48M133 145L202 81M122 198L55 129M120 249L201 179"
+              />
+            </g>
+            <g transform="translate(75 305)">
+              <path
+                d="M45 10Q30-12 48-28"
+                fill="none"
+                stroke="#7c7750"
+                stroke-width="8"
+              />
+              <ellipse cx="45" cy="55" rx="65" ry="47" fill="#cf773f" />
+              <ellipse cx="45" cy="55" rx="43" ry="47" fill="#dc8d4f" />
+              <ellipse cx="45" cy="55" rx="20" ry="47" fill="#e49d61" />
+            </g>
+          </g>
+        </defs></svg
+      ><svg class="botanical left" viewBox="0 0 260 420" aria-hidden="true">
+        <use href="#branch" /></svg
+      ><svg class="botanical right" viewBox="0 0 260 420" aria-hidden="true">
+        <use href="#branch" />
+      </svg>
+      <header class="top" style="justify-content: flex-end">
+        <div class="tools">
+          <button id="penBtn" aria-pressed="false" title="Draw on the slide">
+            Pen</button
+          ><span id="penTools" class="penTools hidden"
+            ><button id="undoInk" title="Undo last stroke">Undo</button
+            ><button id="clearInk" title="Clear ink on this slide">
+              Clear ink</button
+            ><input
+              id="inkColor"
+              type="color"
+              value="#315d79"
+              aria-label="Pen color"
+              title="Pen color" /></span
+          ><button id="outlineBtn">Outline</button
+          ><button id="notesBtn" aria-pressed="false">Notes</button
+          ><button id="full">Full screen</button>
+        </div>
+      </header>
+      <main id="content" aria-live="polite"></main>
+      <canvas id="inkCanvas" aria-label="Drawing area"></canvas>
+      <aside id="speaker" class="speaker hidden"></aside>
+      <footer class="footer">
+        <div class="nav">
+          <button id="prev" aria-label="Previous slide">←</button
+          ><span class="counter" id="count"></span
+          ><span id="stepCount" class="counter"></span
+          ><button class="next" id="next">Next →</button>
+          <div class="dots" id="dots" aria-label="Choose slide"></div>
+        </div>
+        <div class="progress"><div id="bar"></div></div>
+      </footer>
+    </div>
+    <div
+      id="outline"
+      class="outline hidden"
+      role="dialog"
+      aria-modal="true"
+      aria-labelledby="outlineTitle"
+    >
+      <div class="outlineInner">
+        <div class="outlineHeader">
+          <h3 id="outlineTitle">Presentation outline</h3>
+          <button class="quiet" id="closeOutline">Close ×</button>
+        </div>
+        <div class="outlineList" id="outlineList"></div>
+      </div>
+    </div>
+    <script src="slides.js"></script>
+    <script src="app.js"></script>
+  </body>
+</html>
