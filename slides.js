@@ -624,21 +624,20 @@ const slides = [
       "How can observational protection coexist with a neutral trial result?",
     steps: [
       {
-        label: "Bias",
+        label: "Different People",
         title: "",
         body: `<ul class="answerBullets">
-    <li>Statin users may differ in health behaviors and adherence</li>
-    <li><strong>Heterogeneity and possible publication bias</strong></li>
+    <li>Statin users may have healthier habits and better preventive care</li>
     <li>Large samples do not eliminate confounding</li>
   </ul>`,
       },
       {
-        label: "Timing",
+        label: "Different Timing",
         title: "",
         body: `<ul class="answerBullets">
-    <li>Earlier or longer exposure in varied populations</li>
-    <li>Different from <strong>starting after age 70</strong></li>
-    <li>Plausible explanation, not proven</li>
+    <li>The review included varied ages and treatment durations</li>
+    <li>STAREE tested starting treatment after age 70</li>
+    <li>Earlier treatment might matter, but that remains unproven</li>
   </ul>`,
       },
       {
