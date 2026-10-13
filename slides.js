@@ -35,7 +35,7 @@ const slides = [
         label: "Independence",
         title: "",
         body: `<ul class="answerBullets">
-    <li>Preventing heart attacks is only part of the goal</li>
+    <li>Preventing cardiovascular disease is only part of the goal</li>
     <li>Can treatment extend survival <strong>without dementia or persistent disability?</strong></li>
   </ul>`,
       },
@@ -43,9 +43,9 @@ const slides = [
         label: "Safety",
         title: "",
         body: `<ul class="answerBullets">
-    <li>More medications and potential interactions</li>
-    <li>Competing health risks</li>
-    <li>Balance <strong>cardiovascular benefit, function, and adverse effects</strong></li>
+    <li>Older patients often take several medications and have other health conditions</li>
+    <li>“Does starting a statin help enough to justify another daily medication and its possible side effects?”</li>
+    <li>Weight <strong>cardiovascular benefit against side effects</strong></li>
   </ul>`,
       },
     ],
